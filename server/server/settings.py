@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "housekeeping",
     "amenities",
+    "roomlist",
     'rest_framework',
     'corsheaders',
 ]
@@ -60,6 +61,11 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
 ]
 
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny',
+    ]
+}
 ROOT_URLCONF = "server.urls"
 
 TEMPLATES = [

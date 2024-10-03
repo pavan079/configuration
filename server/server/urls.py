@@ -15,4 +15,7 @@ urlpatterns = [
     
     # Amenities app URLs (make sure this path doesn't conflict with others)
     path('api/', include('amenities.urls')),
+
+        path('api/', include('roomlist.urls')),  # Include roomlist URLs
+
 ]
